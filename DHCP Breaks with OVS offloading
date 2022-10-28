@@ -1,0 +1,5 @@
+I reporting an issue with the dhcp behaivor with ovs offloading. 
+The Issus looks like the same reported here https://bugs.launchpad.net/ubuntu/+source/openvswitch/+bug/1853592
+
+There is a patch mention but I am not sure if this patch is already included in the docker image of the OVS. If this patch missing I request to in include 
+this patch in the docker image.
