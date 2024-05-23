@@ -1,0 +1,66 @@
+---
+name: Bug Report
+description: "Is something not working as it should? Any error messages in the logs? Something is doing strange things? Even if you are not sure whether it is a bug or a PEBCAK, we are happy about every bug report."
+title: "[bug] "
+labels: [bug]
+assignees: []
+body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: OSISM release version
+      description: What version of OSISM are you running? This information is important. The version of a running manager service can be retrieved with `osism get versions manager`. The version is defined in the configuration repository via the `manager_version` parameter in the manager environment (`environments/manager/configuration.yml`).
+      options:
+        - latest
+        - 7.0.4
+        - 7.0.3
+        - 7.0.2
+        - 7.0.1
+        - 7.0.0
+        - 6.0.2
+        - 6.0.1
+        - 6.0.0
+        - Some older version
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What's the problem?"
+      description: Try to describe the problem as best you can. The more details and logs we have, the better.
+      value: "Detailed description of the problem"
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: References to existing reports
+      description: Sometimes you have already found the problem elsewhere (mailing lists, Launchpad, Github, RedHat bug tracker or knowledgebase, ..)? Feel free to share the links directly here. This helps us and saves time.
+      value: "References to existing bug reports, mailing lists, ..."
+    validations:
+      required: false
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How do you rate the severity? A high severity initially has nothing to do with faster processing. This is only a hint for us.
+      options:
+        - low
+        - medium
+        - high
+      default: 0
+    validations:
+      required: false
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How do you rate the urgency? A high urgency initially has nothing to do with faster processing. This is only a hint for us.
+      options:
+        - low
+        - medium
+        - high
+      default: 0
+    validations:
+      required: false
