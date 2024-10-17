@@ -12,6 +12,8 @@ body:
       description: What version of OSISM are you running? This information is important. The version of a running manager service can be retrieved with `osism get versions manager`. The version is defined in the configuration repository via the `manager_version` parameter in the manager environment (`environments/manager/configuration.yml`).
       options:
         - latest
+        - 8.0.2
+        - 8.0.1
         - 8.0.0
         - 7.1.3
         - 7.1.2
